@@ -49,6 +49,7 @@ html{
  textarea,
  select {
    font: inherit;
+   background: none;
  }
  button{
    border: none;
