@@ -1,0 +1,32 @@
+@import url(./reset.css);
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --white:#fff;
+  --white-90:#E4E4E7;
+  --white-95:#F1F1F3;
+  --white-97:#F1F1F3;
+  --black:#000;
+  --black-95:#141414;
+  --black-90:#1A1A1A;
+  --black-85:#262626;
+  --black-80:#333333;
+  --black-70:#4D4D4D;
+  --black-50:#808080;
+  --black-40:#999999;
+  --purple-60:#703BF7;
+  --purple-65:#8254F8;
+  --purple-70:#946CF9;
+  --purple-75:#A685FA;
+  --purple-90:#DBCEFD;
+  --purple-95:#EDE7FE;
+  --purple-97:#F4F0FE;
+}
+
