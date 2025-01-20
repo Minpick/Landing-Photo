@@ -4,21 +4,34 @@
 
 #header {
   position: fixed;
-  width: 1160px;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 80px;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
+  z-index: 10;
+
   font-weight: 600;
   font-size: 1.2rem;
-  border-bottom: 1px solid var(--black-70);
+  transition: background-color 0.7s;
+  background-color:transparent;
 
   &>div {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: border-bottom-color 0.7s;
+    border-bottom: 1px solid var(--black-70);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &>div>div {
     display: flex;
     align-items: center;
   }
 
-  &>nav {
+  &>div>nav {
     display: flex;
 
     &>a {
@@ -30,6 +43,8 @@
 
   }
 }
+
+
 
 #hero-image {
   position: absolute;
@@ -45,8 +60,10 @@
 
 #home {
   position: relative;
-  top: 80px;
   height: 100vh;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 
   &>div {
     width: 50%;
@@ -65,6 +82,319 @@
 }
 
 #portfolio {
-  height: 1000px;
-  background-color: blue;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  background-color: var(--black-95);
+
+
+  &>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    grid-template-areas:
+      "l l l"
+      "c c c"
+      "c c c"
+      "c c c"
+    ;
+
+    &>input[type="radio"] {
+      display: none;
+    }
+
+    .tab-content {
+      opacity: 0;
+      transition: opacity 1s, max-height .4s;
+    }
+
+    #content-1 {
+      grid-area: c;
+    }
+
+    #content-2 {
+      grid-area: c;
+    }
+
+    #content-3 {
+      grid-area: c;
+    }
+
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3 {
+      opacity: 1;
+    }
+
+    #tab-btn-1:checked+label,
+    #tab-btn-2:checked+label,
+    #tab-btn-3:checked+label {
+      border-bottom-color: var(--purple-60);
+    }
+
+    &>label {
+      grid-area: "l";
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 40px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.4s;
+      margin-bottom: 20px;
+    }
+
+    &>div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      &>div {
+        cursor: pointer;
+        margin: 0 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+
+        &>div {
+          position: absolute;
+          top: 0;
+          z-index: 3;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          transition: background-color .4s;
+          background-color: transparent;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+
+            &~p {
+              opacity: 1;
+            }
+          }
+        }
+
+        &>p {
+          padding: 10px;
+          z-index: 2;
+          color: #fff;
+          position: absolute;
+          bottom: 0;
+          transition: opacity .4s;
+          text-align: center;
+          opacity: 0;
+        }
+
+      }
+    }
+  }
 }
+
+
+#aboutus {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  &>div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &>div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 200px;
+
+      &>h3 {
+        text-align: center;
+      }
+
+      &>p {
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+
+
+#faq {
+  background-color: var(--black-70);
+  padding-top: 20px;
+  padding-bottom: 100px;
+  &>div{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    padding: 18px;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    color: var(--black-90);
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+
+  }
+}
+
+
+#footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--black-80);
+  height: 60px;
+
+  &>div {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--black-40);
+
+    &>p {
+      display: flex;
+      align-items: center;
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &>a {
+        height: 32px;
+
+        &:hover {
+          &>svg {
+            fill: var(--black-40);
+          }
+        }
+
+        &>svg {
+          transition: fill .4s;
+          fill: var(--white-90);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.modal {
+  position: fixed;
+  /* фиксированная позиция */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  /* по умолчанию скрыто */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* полупрозрачный фон */
+  z-index: 9999;
+
+}
+
+/* Внутренний блок с контентом */
+.modal-content {
+  position: relative;
+  background: var(--black-90);
+  padding: 40px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  &>iframe {
+    border-radius: 5px;
+    min-width: 700px;
+    min-height: 400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+/* Кнопка-закрывашка */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color .4s;
+
+  &:hover {
+    color: var(--black-40);
+  }
+}
+
+/* Дополнительный пример стиля для кнопок открытия */
