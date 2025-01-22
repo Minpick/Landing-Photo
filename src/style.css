@@ -137,6 +137,7 @@
       grid-area: "l";
       width: 100%;
       display: flex;
+      cursor: pointer;
       align-items: center;
       justify-content: center;
       padding: 10px 40px;
