@@ -23,40 +23,40 @@ document.addEventListener('scroll', () => {
 
 
 // portfolio videos modal
-// Находим элементы
 const modal = document.getElementById('videoModal');
 const closeBtn = document.getElementById('closeBtn');
 const modalVideo = document.getElementById('modalVideo');
-
-// Находим все кнопки, открывающие модальное окно, по классу
 const openModalButtons = document.querySelectorAll('.open-modal');
 
-// Функция для открытия модалки и подстановки нужного видео
 function openModal(videoId) {
-  // Подставляем ID в ссылку для YouTube
-  // '?autoplay=1' запустит видео автоматически 
   modalVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  modal.style.display = 'flex'; // показываем модал (flex для выравнивания)
+  modal.style.display = 'flex';
 }
 
-// Функция для закрытия модалки
 function closeModal() {
   modal.style.display = 'none';
-  modalVideo.src = ''; // сбрасываем src, чтобы видео остановилось
+  modalVideo.src = '';
 }
 
-// Вешаем обработчик на все кнопки
 openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
+    // Проверяем ширину экрана
+    const isMobile = window.matchMedia('(max-width: 800px)').matches;
+    
+    // Для мобильных: проверяем, был ли клик на иконке play
+    if (isMobile) {
+      const playIcon = event.target.closest('.fa-play');
+      if (!playIcon) return; // Если клик не по иконке - выходим
+    }
+    
     const videoId = button.getAttribute('data-video-id');
     openModal(videoId);
   });
 });
 
-// Закрытие по клику на &times;
+// Остальной код остается без изменений
 closeBtn.addEventListener('click', closeModal);
 
-// (Опционально) Закрытие по клику вне области контента
 window.addEventListener('click', event => {
   if (event.target === modal) {
     closeModal();
