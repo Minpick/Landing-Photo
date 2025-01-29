@@ -477,6 +477,7 @@
   }
 
   .panel {
+    box-sizing: border-box;
     padding: 0 18px;
     background-color: white;
     max-height: 0;
@@ -487,7 +488,7 @@
     border-bottom-right-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease-out,padding 0.4s ease-out;
   }
 
   .accordion:after {

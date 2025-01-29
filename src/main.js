@@ -42,13 +42,13 @@ openModalButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     // Проверяем ширину экрана
     const isMobile = window.matchMedia('(max-width: 800px)').matches;
-    
+
     // Для мобильных: проверяем, был ли клик на иконке play
     if (isMobile) {
       const playIcon = event.target.closest('.fa-play');
       if (!playIcon) return; // Если клик не по иконке - выходим
     }
-    
+
     const videoId = button.getAttribute('data-video-id');
     openModal(videoId);
   });
@@ -73,8 +73,10 @@ for (i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
+      panel.style.padding = "0 18px";
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight + 20 + "px";
+      panel.style.padding = "10px 18px";
     }
   });
 }
