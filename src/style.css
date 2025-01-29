@@ -10,15 +10,17 @@
   height: 80px;
   z-index: 10;
 
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1rem;
   transition: background-color 0.7s;
-  background-color:transparent;
+  background-color: transparent;
+
 
   &>div {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 20px;
     transition: border-bottom-color 0.7s;
     border-bottom: 1px solid var(--black-70);
     display: flex;
@@ -33,6 +35,7 @@
 
   &>div>nav {
     display: flex;
+    gap: 10px;
 
     &>a {
       display: flex;
@@ -41,6 +44,85 @@
       padding: 10px;
     }
 
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 60px;
+  }
+
+  .burger div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--black-40);
+    margin: 5px;
+    transition: transform 0.3s;
+  }
+
+
+}
+
+@media (max-width:800px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    z-index: 9;
+  }
+
+  #header {
+    height: 0;
+    &>div>h4{
+      visibility: hidden;
+    }
+    &>div>nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background: white;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      z-index: 12;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: right 0.5s ease-in-out;
+
+      &>a {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    nav.active {
+      right: 0;
+    }
+
+
+
+    .burger {
+      display: flex;
+    }
   }
 }
 
@@ -106,7 +188,7 @@
 
     .tab-content {
       opacity: 0;
-      transition: opacity 1s, max-height .4s;
+      transition: opacity .4s, max-height .4s;
     }
 
     #content-1 {
@@ -154,8 +236,23 @@
         cursor: pointer;
         margin: 0 20px;
         border-radius: 5px;
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
+
+        &:hover {
+          &>div {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+
+          &>p {
+            bottom: 0;
+          }
+
+          &>svg {
+            font-size: 3.5rem;
+          }
+
+        }
 
         &>div {
           position: absolute;
@@ -167,24 +264,26 @@
           transition: background-color .4s;
           background-color: transparent;
 
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.5);
 
-            &~p {
-              opacity: 1;
-            }
-          }
         }
 
         &>p {
           padding: 10px;
-          z-index: 2;
-          color: #fff;
+          z-index: 4;
           position: absolute;
-          bottom: 0;
-          transition: opacity .4s;
+          bottom: -100px;
+          transition: bottom .4s;
           text-align: center;
-          opacity: 0;
+        }
+
+        &>svg {
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 3rem;
+          z-index: 4;
+          transition: font-size .4s;
         }
 
       }
@@ -231,13 +330,15 @@
 #faq {
   background-color: var(--black-70);
   padding-top: 20px;
-  padding-bottom: 100px;
-  &>div{
+  padding-bottom: 40px;
+
+  &>div {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
+
   .accordion {
     background-color: #eee;
     color: #444;
@@ -289,6 +390,57 @@
   }
 }
 
+
+#team {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
+    justify-content: space-around;
+
+    &>div {
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      max-width: 300px;
+
+      &>b {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: background-color .4s;
+        background-color: transparent;
+      }
+
+      &>div {
+        position: absolute;
+        bottom: -100px;
+        text-align: center;
+        padding: 10px;
+        overflow: hidden;
+        transition: bottom .4s;
+      }
+
+      &:hover {
+        &>div {
+          bottom: 0;
+        }
+
+        &>b {
+          background-color: var(--black-transparent);
+          ;
+        }
+      }
+    }
+  }
+}
 
 #footer {
   display: flex;
@@ -355,7 +507,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   /* полупрозрачный фон */
-  z-index: 9999;
+  z-index: 20;
 
 }
 

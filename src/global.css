@@ -48,6 +48,7 @@ html {
 body {
    background-color: var(--black-90);
    color: var(--white-90);
+   padding-bottom: 60px;
 }
 
 button {

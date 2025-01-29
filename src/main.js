@@ -1,3 +1,8 @@
+
+
+
+//header background change
+
 document.addEventListener('scroll', () => {
   // Получаем текущую прокрутку
   const scrollPosition = window.scrollY;
@@ -16,6 +21,8 @@ document.addEventListener('scroll', () => {
 });
 
 
+
+// portfolio videos modal
 // Находим элементы
 const modal = document.getElementById('videoModal');
 const closeBtn = document.getElementById('closeBtn');
@@ -61,7 +68,7 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -71,5 +78,31 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+//burger-menu
+
+
+const burger = document.getElementById('burger-menu');
+const navMenu = document.getElementById('nav-menu');
+const overlay = document.getElementById('overlay');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+function closeMenu() {
+  navMenu.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+burger.addEventListener('click', function () {
+  navMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', closeMenu);
+
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
 
 
