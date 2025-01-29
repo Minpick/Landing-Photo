@@ -110,3 +110,28 @@ navLinks.forEach(link => {
 
 
 
+//animation on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add class when in viewport
+        } else {
+          entry.target.classList.remove("visible"); // Remove class when out of viewport
+        }
+      });
+    },
+    {
+      threshold: 0.3, // Trigger when 10% of the element is visible
+    }
+  );
+
+  elements.forEach((element) => {
+    observer.observe(element); // Observe each element
+  });
+});
+
+
