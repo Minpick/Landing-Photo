@@ -51,6 +51,7 @@
     flex-direction: column;
     cursor: pointer;
     margin-top: 60px;
+    z-index: 12;
   }
 
   .burger div {
@@ -85,6 +86,7 @@
   }
 
   #header {
+   
     height: 0;
     &>div>h4{
       visibility: hidden;
@@ -95,7 +97,7 @@
       right: -100%;
       width: 250px;
       height: 100vh;
-      background: white;
+      background: var(--white-90);
       padding: 50px 20px;
       display: flex;
       flex-direction: column;
@@ -109,6 +111,7 @@
       &>a {
         height: fit-content;
         width: 100%;
+        color: var(--black-40);
         display: flex;
         justify-content: center;
       }
@@ -123,6 +126,54 @@
     .burger {
       display: flex;
     }
+
+  }
+  #header .burger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: var(--black-transparent);
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color .4s;
+  }
+
+  /* Position bars absolutely within container */
+  #header .burger div {
+    position: absolute;
+    left: 10px; /* (40px - 30px) / 2 = 5px */
+    margin: 0;
+    transition: all 0.3s;
+  }
+
+  #header .burger div:first-child {
+    top: 17px;
+  }
+
+  #header .burger div:nth-child(2) {
+    top: 25px;
+  }
+
+  #header .burger div:last-child {
+    top: 33px;
+  }
+
+  /* X animation when active */
+  #header > div > nav.active ~ .burger{
+    background-color: transparent;
+  }
+  #header > div > nav.active ~ .burger div:first-child {
+    transform: rotate(45deg);
+    top: 25px;
+  }
+
+  #header > div > nav.active ~ .burger div:nth-child(2) {
+    opacity: 0;
+  }
+
+  #header > div > nav.active ~ .burger div:last-child {
+    transform: rotate(-45deg);
+    top: 25px;
   }
 }
 
@@ -162,13 +213,18 @@
 
   }
 }
+@media(max-width:800px){
+  #home{
+    &>div{
+      width: 80%;
+    }
+  }
+}
 
 #portfolio {
   padding-bottom: 40px;
   padding-top: 20px;
   background-color: var(--black-95);
-
-
   &>div {
     max-width: 1200px;
     margin: 0 auto;
