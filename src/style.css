@@ -457,11 +457,10 @@
 
   .accordion {
     background-color: #eee;
-    color: #444;
+    color: var(--black-80);
+    font-weight: 500;
     padding: 18px;
     width: 100%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     border: none;
     outline: none;
     transition: 0.4s;
@@ -470,10 +469,17 @@
     align-items: center;
     justify-content: space-between;
     text-align: left;
+    transition: border-bottom-left-radius .7s ease-in,
+    border-bottom-right-radius .7s ease-in,
+    ;
   }
 
   .active, .accordion:hover {
     background-color: #ccc;
+  }
+  .active{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .panel {
@@ -482,13 +488,18 @@
     background-color: white;
     max-height: 0;
     color: var(--black-90);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.2rem;
+    opacity: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: max-height 0.4s ease-out,padding 0.4s ease-out;
+    transition:
+     max-height 0.4s ease-out,
+     padding 0.4s ease-out,
+     opacity 0.4s ease-out
+     ;
   }
 
   .accordion:after {

@@ -74,9 +74,11 @@ for (i = 0; i < acc.length; i++) {
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       panel.style.padding = "0 18px";
+      panel.style.opacity = "0";
     } else {
       panel.style.maxHeight = panel.scrollHeight + 20 + "px";
       panel.style.padding = "10px 18px";
+      panel.style.opacity = "1";
     }
   });
 }
