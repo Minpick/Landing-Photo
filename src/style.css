@@ -236,8 +236,8 @@
 
 #portfolio {
   padding: 0 10px;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  padding-bottom: 80px;
+  padding-top: 60px;
   background-color: var(--black-95);
 
   &>div {
@@ -294,21 +294,24 @@
       align-items: center;
       justify-content: center;
       padding: 10px 40px;
-      border-bottom: 2px solid transparent;
+      border-bottom: 1px solid var(--black-80);
       transition: border-bottom-color 0.4s;
       margin-bottom: 20px;
+      font-weight: 600;
+
     }
 
     &>div {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
 
       &>div {
         cursor: pointer;
-        margin: 0 20px;
         border-radius: 5px;
         position: relative;
         overflow: hidden;
+        height: fit-content;
 
         &:hover {
           &>div {
@@ -373,9 +376,11 @@
 
   #portfolio {
     &>div {
+      height: fit-content;
       &>div {
         grid-template-columns: 1fr;
         gap: 10px;
+        height: fit-content;
       }
 
       &>label {
@@ -388,8 +393,8 @@
 
 #aboutus {
   padding: 0 10px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 80px;
+  padding-top: 60px;
 
   &>div {
     padding-top: 20px;
@@ -445,8 +450,8 @@
 #faq {
   padding: 0 10px;
   background-color: var(--black-85);
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
+  padding-top: 60px;
 
   &>div {
     max-width: 1200px;
@@ -470,14 +475,15 @@
     justify-content: space-between;
     text-align: left;
     transition: border-bottom-left-radius .7s ease-in,
-    border-bottom-right-radius .7s ease-in,
+      border-bottom-right-radius .7s ease-in,
     ;
   }
 
   .active, .accordion:hover {
     background-color: #ccc;
   }
-  .active{
+
+  .active {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -496,10 +502,9 @@
     margin-bottom: 20px;
     overflow: hidden;
     transition:
-     max-height 0.4s ease-out,
-     padding 0.4s ease-out,
-     opacity 0.4s ease-out
-     ;
+      max-height 0.4s ease-out,
+      padding 0.4s ease-out,
+      opacity 0.4s ease-out;
   }
 
   .accordion:after {
@@ -536,8 +541,8 @@
 
 #team {
   padding: 0 10px;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
+  padding-top: 60px;
 
   &>div {
     max-width: 1200px;
