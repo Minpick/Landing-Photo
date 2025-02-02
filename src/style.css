@@ -238,7 +238,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-  
+  background-color: #00000061;
   /* background-color: var(--black-95); */
 
   &>div {
@@ -547,6 +547,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
+  background-color: #000000;
   &>div {
     max-width: 1200px;
     margin: 0 auto;
@@ -744,7 +745,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-  background-color: #00000068;
+  background-color: #00000095;
   &>div {
     max-width: 1200px;
     margin: 0 auto;
