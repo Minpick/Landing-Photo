@@ -396,6 +396,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
+  background-color: #0000004f;
 
   &>div {
     padding-top: 20px;
@@ -453,6 +454,7 @@
   /* background-color: var(--black-85); */
   padding-bottom: 80px;
   padding-top: 60px;
+  
 
   &>div {
     max-width: 1200px;
@@ -605,8 +607,7 @@
   padding: 0 10px;
   padding-top: 60px;
   padding-bottom: 80px;
-  /* background-color: var(--black-85); */
-
+  background-color: #00000052;
   &>div {
     max-width: 1200px;
     margin: 0 auto;
@@ -616,11 +617,13 @@
       "c2 i"
       "c3 i";
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 15px;
 
     &>img {
       grid-area: i;
       height: 100%;
+      width: 100%;
+      max-height: 600px;
       object-fit: cover;
       visibility: hidden;
       border-radius: 20px;
@@ -639,6 +642,7 @@
         line-height: 3rem;
         transition: color .4s;
         color: var(--black-70);
+        width: 60px;
       }
 
       &>.stages_line {
@@ -653,7 +657,7 @@
       &>div {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        /* gap: 20px; */
 
         &>h3 {
           transition: color .4s;
@@ -663,7 +667,7 @@
         &>p {
           line-height: 1.5rem;
           color: var(--black-40);
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
     }
