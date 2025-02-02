@@ -238,7 +238,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-  background-color: var(--black-95);
+  /* background-color: var(--black-95); */
 
   &>div {
     max-width: 1200px;
@@ -450,7 +450,7 @@
 
 #faq {
   padding: 0 10px;
-  background-color: var(--black-85);
+  /* background-color: var(--black-85); */
   padding-bottom: 80px;
   padding-top: 60px;
 
@@ -605,7 +605,7 @@
   padding: 0 10px;
   padding-top: 60px;
   padding-bottom: 80px;
-  background-color: var(--black-85);
+  /* background-color: var(--black-85); */
 
   &>div {
     max-width: 1200px;

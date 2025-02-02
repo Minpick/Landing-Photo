@@ -46,9 +46,10 @@ html {
 }
 
 body {
-   background-color: var(--black-90);
+   /* background-color: var(--black-90); */
    color: var(--white-90);
-
+   /* background-image: url(../src/assets/background.png); */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../src/assets/background.png);
    padding-bottom: 60px;
 }
 
