@@ -238,6 +238,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
+  
   /* background-color: var(--black-95); */
 
   &>div {
@@ -396,7 +397,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-  background-color: #0000004f;
+  background-color: #00000068;
 
   &>div {
     padding-top: 20px;
@@ -546,7 +547,6 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-
   &>div {
     max-width: 1200px;
     margin: 0 auto;
@@ -607,7 +607,7 @@
   padding: 0 10px;
   padding-top: 60px;
   padding-bottom: 80px;
-  background-color: #00000052;
+  background-color: #0000002d;
   &>div {
     max-width: 1200px;
     margin: 0 auto;
@@ -642,7 +642,7 @@
         line-height: 3rem;
         transition: color .4s;
         color: var(--black-70);
-        width: 60px;
+        width: 40px;
       }
 
       &>.stages_line {
@@ -744,7 +744,7 @@
   padding: 0 10px;
   padding-bottom: 80px;
   padding-top: 60px;
-
+  background-color: #00000068;
   &>div {
     max-width: 1200px;
     margin: 0 auto;
