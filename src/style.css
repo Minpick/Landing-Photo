@@ -465,8 +465,8 @@
   }
 
   .accordion {
-    background-color: #eee;
-    color: var(--black-80);
+    background-color: #cfcfcf;
+    color: var(--black-90);
     font-weight: 500;
     padding: 18px;
     width: 100%;
@@ -484,7 +484,7 @@
   }
 
   .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: #a7a7a7;
   }
 
   .active {
@@ -495,7 +495,7 @@
   .panel {
     box-sizing: border-box;
     padding: 0 18px;
-    background-color: white;
+    background-color: #cacaca;
     max-height: 0;
     color: var(--black-90);
     font-weight: 400;
