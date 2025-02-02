@@ -135,3 +135,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим все контентные блоки и изображения
+  const contentBlocks = document.querySelectorAll('[class^="stages_content"]');
+  const allImages = document.querySelectorAll('[id^="stages_img"]');
+
+  // Для каждого блока добавляем обработчики событий
+  contentBlocks.forEach(block => {
+    block.addEventListener('mouseenter', function() {
+      // Находим следующее изображение после текущего блока
+      const img = this.nextElementSibling;
+      
+      // Проверяем, что это нужное изображение
+      if (img && img.matches('img[id^="stages_img"]')) {
+        // Удаляем класс у всех изображений
+        allImages.forEach(image => image.classList.remove('stages_img'));
+        // Добавляем класс текущему изображению
+        img.classList.add('stages_img');
+      }
+    });
+  });
+});
+
+

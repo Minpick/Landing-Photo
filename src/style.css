@@ -377,6 +377,7 @@
   #portfolio {
     &>div {
       height: fit-content;
+
       &>div {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -599,6 +600,169 @@
     }
   }
 }
+
+#stages {
+  padding: 0 10px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: var(--black-85);
+
+  &>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "c1 i"
+      "c2 i"
+      "c3 i";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    &>img {
+      grid-area: i;
+      height: 100%;
+      object-fit: cover;
+      visibility: hidden;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity .7s, visibility .7s;
+    }
+
+    &>div {
+      margin-right: 40px;
+      display: flex;
+      gap: 30px;
+      position: relative;
+
+      &>span {
+        font-size: 3rem;
+        line-height: 3rem;
+        transition: color .4s;
+        color: var(--black-70);
+      }
+
+      &>.stages_line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--black-70);
+      }
+
+      &>div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &>h3 {
+          transition: color .4s;
+          font-size: 1.8rem;
+        }
+
+        &>p {
+          line-height: 1.5rem;
+          color: var(--black-40);
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+
+    &>.stages_content1 {
+      grid-area: c1;
+
+      &:hover {
+        &>span {
+          color: var(--purple-70);
+        }
+
+        &>div>h3 {
+          color: var(--purple-70);
+        }
+
+      }
+    }
+
+    &>.stages_content2 {
+      grid-area: c2;
+
+      &:hover {
+        &>span {
+          color: var(--purple-60);
+        }
+
+        &>div>h3 {
+          color: var(--purple-60);
+        }
+
+      }
+    }
+
+    &>.stages_content3 {
+      grid-area: c3;
+
+      &:hover {
+        &>span {
+          color: var(--purple-50);
+        }
+
+        &>div>h3 {
+          color: var(--purple-50);
+        }
+
+      }
+    }
+  }
+
+  .stages_img {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#videos {
+  padding: 0 10px;
+  padding-bottom: 80px;
+  padding-top: 60px;
+
+  &>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &>div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+
+      &>video {
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+        
+      
+      }
+
+      &>p {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      &>h4{
+        position: absolute;
+        bottom: 90px;
+        left: 10px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-shadow: 0px 1px 1px black;
+      }
+    }
+  }
+}
+
 
 #footer {
   padding: 0 10px;
