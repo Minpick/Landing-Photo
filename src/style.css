@@ -918,7 +918,7 @@
         height: 670px;
         object-fit: cover;
         width: 380px;
-        &::-webkit-media-controls{
+        /* &::-webkit-media-controls{
           display: none!important;
         }
         &::-webkit-media-controls-panel {
@@ -932,7 +932,7 @@
         }
         &::-webkit-media-controls-current-time-display {
           display: none !important;
-        }
+        } */
       }
 
       &>p {

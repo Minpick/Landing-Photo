@@ -3,29 +3,29 @@
 
 //header background change
 
-document.addEventListener("DOMContentLoaded", () => {
-  const lazyVideos = document.querySelectorAll('.lazy-video');
+// document.addEventListener("DOMContentLoaded", () => {
+//   const lazyVideos = document.querySelectorAll('.lazy-video');
   
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const video = entry.target;
-        const source = document.createElement('source');
-        source.src = video.dataset.src;
-        source.type = 'video/mp4';
-        video.appendChild(source);
-        video.load();
-        video.classList.add('loaded');
-        observer.unobserve(video);
-      }
-    });
-  }, {
-    rootMargin: '200px 0px',
-    threshold: 0.1
-  });
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         const video = entry.target;
+//         const source = document.createElement('source');
+//         source.src = video.dataset.src;
+//         source.type = 'video/mp4';
+//         video.appendChild(source);
+//         video.load();
+//         video.classList.add('loaded');
+//         observer.unobserve(video);
+//       }
+//     });
+//   }, {
+//     rootMargin: '200px 0px',
+//     threshold: 0.1
+//   });
 
-  lazyVideos.forEach(video => observer.observe(video));
-});
+//   lazyVideos.forEach(video => observer.observe(video));
+// });
 
 document.addEventListener('scroll', () => {
   // Получаем текущую прокрутку
