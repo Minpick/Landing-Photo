@@ -593,6 +593,7 @@
     border: none;
     outline: none;
     transition: 0.4s;
+    box-shadow: 0px 0px 3px var(--purple-70);
     display: flex;
     font-size: 1.4rem;
     align-items: center;
@@ -618,6 +619,7 @@
     max-height: 0;
     color: var(--white-90);
     font-weight: 400;
+   
     font-size: 1.2rem;
     opacity: 0;
     border-bottom-left-radius: 10px;
