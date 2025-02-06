@@ -394,10 +394,14 @@
       cursor: pointer;
       border-radius: 10px;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.082);
       position: relative;
       z-index: 3;
       &>div{
         position: relative;
+      }
+      &>div>img{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.082);
       }
       /* Minimum item width */
     }
@@ -452,7 +456,7 @@
       transition: font-size .4s;
     }
     .open-modal:hover{
-      .play-icon{
+      &>div>.play-icon{
         font-size: 3.5rem;
       }
     }
@@ -578,7 +582,7 @@
     background-color: #bbb;
     color: var(--black-90);
     font-weight: 500;
-    padding: 18px;
+    padding: 30px 18px;
     width: 100%;
     border: none;
     outline: none;
