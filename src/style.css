@@ -229,6 +229,7 @@
 
 @media(max-width:800px) {
   #home {
+
     &>div {
       width: 80%;
     }
@@ -495,6 +496,8 @@
   }
 
   #portfolio {
+    padding-bottom: 60px;
+    padding-top: 40px;
     &>div {
       height: fit-content;
 
@@ -549,10 +552,11 @@
 
 @media(max-width:800px) {
   #aboutus {
-
+    padding-bottom: 60px;
+    padding-top: 40px;
     &>div {
       flex-direction: column;
-      gap: 30px;
+      gap: 50px;
 
       &>div {
         gap: 10px;
@@ -649,7 +653,8 @@
 
 @media(max-width:800px) {
   #faq {
-
+ padding-bottom: 60px;
+    padding-top: 40px;
     .accordion {
       height: fit-content;
       line-height: normal;
@@ -723,8 +728,18 @@
 
 @media(max-width:800px) {
   #team {
+    padding-bottom: 60px;
+    padding-top: 40px;
     &>div {
       flex-direction: column;
+      &>div{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &>div{
+          gap: 10px;
+        }
+      }
     }
   }
 }
@@ -854,7 +869,8 @@
 
 @media(max-width:800px) {
   #stages {
-
+    padding-bottom: 60px;
+    padding-top: 40px;
     &>div {
       display: flex;
       flex-direction: column;
@@ -917,6 +933,8 @@
 
 @media(max-width:800px) {
   #videos {
+    padding-bottom: 60px;
+    padding-top: 40px;
     &>div {
       flex-direction: column;
     }
@@ -1011,7 +1029,15 @@
     }
   }
 }
-
+@media(max-width:800px){
+  #prices{
+    padding-bottom: 60px;
+    padding-top: 40px;
+    &>div{
+      flex-direction: column;
+    }
+  }
+}
 
 #footer {
   padding: 0 10px;
