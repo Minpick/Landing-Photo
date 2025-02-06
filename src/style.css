@@ -919,7 +919,19 @@
         object-fit: cover;
         width: 380px;
         &::-webkit-media-controls{
-          display: none;
+          display: none!important;
+        }
+        &::-webkit-media-controls-panel {
+          display: none !important;
+        }
+        &::-webkit-media-controls-play-button {
+          display: none !important;
+        }
+        &::-webkit-media-controls-timeline {
+          display: none !important;
+        }
+        &::-webkit-media-controls-current-time-display {
+          display: none !important;
         }
       }
 
