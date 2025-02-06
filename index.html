@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" rel="preload" as="style">
   <!-- <link rel="stylesheet" href="/fontawesome/css/brands.min.css" />
   <link rel="stylesheet" href="/fontawesome/css/solid.min.css" />
   <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" /> -->
@@ -175,7 +175,7 @@
         <label for="tab-btn-2">Projects</label>
         <input id="tab-btn-3" name="tab-btn" type="radio" value="">
         <label for="tab-btn-3">Podcasts</label>
-        <div class="tab-content" id="content-1" class="animate-on-scroll">
+        <!-- <div class="tab-content" id="content-1" class="animate-on-scroll">
           <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
             <img src="./src/assets/hero-image.jpg" />
             <i class="fa-solid fa-play  play-icon"></i>
@@ -203,75 +203,258 @@
             <i class="fa-solid fa-circle-info info-icon"></i>
             <div></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+        </div> -->
+        <div class="tab-content" id="content-1">
+          <div class="carousel-container">
+            <div class="carousel-inner" id="carousel1">
+              <!-- Your existing items -->
+              <div class="open-modal" id="tab-content1" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content1" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content1" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content1" data-video-id="dQw4w9WgXcQ">
+              <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+              </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content1" data-video-id="dQw4w9WgXcQ">
+               <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+               </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <!-- Repeat other items -->
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow carousel-prev" id="prev1">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow carousel-next" id="next1">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
         <div class="tab-content" id="content-2">
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          <div class="carousel-container">
+            <div class="carousel-inner" id="carousel2">
+              <!-- Your existing items -->
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+               <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+               </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <!-- Repeat other items -->
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow carousel-prev" id="prev2">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow carousel-next" id="next2">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
         <div class="tab-content" id="content-3">
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-          </div>
-          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
-            <img src="./src/assets/hero-image.jpg" />
-            <i class="fa-solid fa-play  play-icon"></i>
-            <i class="fa-solid fa-circle-info info-icon"></i>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          <div class="carousel-container">
+            <div class="carousel-inner" id="carousel3">
+              <!-- Your existing items -->
+              <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" >
+                  <i class="fa-solid fa-play play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/hero-image.jpg" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <!-- Repeat other items -->
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow carousel-prev" id="prev3">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow carousel-next" id="next3">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
+        
+        <!-- <div class="tab-content" id="content-2">
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+        </div> -->
+        <!-- <div class="tab-content" id="content-3">
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+          <div class="open-modal" data-video-id="dQw4w9WgXcQ" class="animate-on-scroll">
+            <img src="./src/assets/hero-image.jpg" />
+            <i class="fa-solid fa-play  play-icon"></i>
+            <i class="fa-solid fa-circle-info info-icon"></i>
+            <div></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+          </div>
+        </div> -->
       </div>
     </section>
     <section id="team">
@@ -279,8 +462,8 @@
       <div>
         <div tabindex="0" class="animate-on-scroll">
           <img src="./src/assets/team/photo.jpg" />
-          <i class="fa-solid fa-circle-info info-icon"></i>
-          <b></b>
+          <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+          <!-- <b></b> -->
           <div>
             <h4>
               Kandrushin Alex
@@ -312,6 +495,56 @@
         </div> -->
       </div>
     </section>
+    <section id="prices">
+      <h1>Prices</h1>
+      <div>
+        <div>
+          <h4>Base</h4>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Neque, tempore reiciendis.</li>
+            <li>Iure, nemo quaerat!</li>
+            <li>Exercitationem, voluptas doloremque.</li>
+            <li>Ex, repellendus debitis?</li>
+            <li>Quasi, reprehenderit architecto?</li>
+          </ul>
+          <div>
+            <h5>13 990 &#x20bd;</h5>
+            <a href="#footer"><button>Contact Us</button></a>
+          </div>
+        </div>
+        <div>
+          <h4>Pro</h4>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Quidem, unde dolore.</li>
+            <li>Iure, quae unde!</li>
+            <li>Ea, perferendis voluptatem!</li>
+            <li>Aspernatur, quae at!</li>
+            <li>Eligendi, architecto natus?</li>
+          </ul>
+          <div>
+            <h5>29 990 &#x20bd;</h5>
+            <a href="#footer"><button>Contact Us</button></a>
+          </div>
+        </div>
+        <div>
+          <h4>VIP</h4>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Molestias, nesciunt accusantium?</li>
+            <li>Eveniet, quaerat voluptate?</li>
+            <li>Quo, qui numquam.</li>
+            <li>Aliquid, quidem tenetur.</li>
+            <li>Sequi, harum id!</li>
+          </ul>
+          <div>
+            <h5>69 990 &#x20bd;</h5>
+            <a href="#footer"><button>Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="faq">
       <h1>FAQ</h1>
       <div class="animate-on-scroll">
@@ -333,10 +566,8 @@
         </div>
       </div>
     </section>
-    
-    <section>
 
-    </section>
+
   </main>
   <footer id="footer">
     <div>

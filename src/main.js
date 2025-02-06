@@ -158,3 +158,93 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+// Carousel functionality
+function updateCarousel(slides,carouselInner,currentIndex) {
+  const slideWidth = slides[0].offsetWidth;
+  const gap = parseInt(window.getComputedStyle(carouselInner1).gap) || 20;
+  const translateX = -(currentIndex * (slideWidth + gap));
+  carouselInner.style.transform = `translateX(${translateX}px)`;
+}
+window.addEventListener('resize', updateCarousel);
+
+
+const carouselInner1 = document.querySelector('#carousel1');
+const prevButton1 = document.querySelector('#prev1');
+const nextButton1 = document.querySelector('#next1');
+const slides1 = document.querySelectorAll('#tab-content1');
+let currentIndex1 = 0;
+nextButton1.addEventListener('click', () => {
+  if (currentIndex1 < slides1.length - 3) { // Show 3 items at a time
+    currentIndex1++;
+    updateCarousel(slides1,carouselInner1,currentIndex1);
+    if(currentIndex1>=slides1.length-3){
+      nextButton1.style.visibility = 'hidden'
+    }
+    prevButton1.style.visibility = 'visible'
+  }
+});
+prevButton1.addEventListener('click', () => {
+  if (currentIndex1 > 0) {
+    currentIndex1--;
+    updateCarousel(slides1,carouselInner1,currentIndex1);
+    if(currentIndex1<=0){
+      prevButton1.style.visibility = 'hidden'
+    }
+    nextButton1.style.visibility = 'visible'
+  }
+});
+const carouselInner2 = document.querySelector('#carousel2');
+const prevButton2 = document.querySelector('#prev2');
+const nextButton2 = document.querySelector('#next2');
+const slides2 = document.querySelectorAll('#tab-content2');
+let currentIndex2 = 0;
+nextButton2.addEventListener('click', () => {
+  if (currentIndex2 < slides2.length - 3) { // Show 3 items at a time
+    currentIndex2++;
+    updateCarousel(slides2,carouselInner2,currentIndex2);
+    if(currentIndex2>=slides2.length-3){
+      nextButton2.style.visibility = 'hidden'
+    }
+    prevButton2.style.visibility = 'visible'
+  }
+});
+prevButton2.addEventListener('click', () => {
+  if (currentIndex2 > 0) {
+    currentIndex2--;
+    updateCarousel(slides2,carouselInner2,currentIndex2);
+    if(currentIndex2<=0){
+      prevButton2.style.visibility = 'hidden'
+    }
+    nextButton2.style.visibility = 'visible'
+  }
+});
+const carouselInner3 = document.querySelector('#carousel3');
+const prevButton3 = document.querySelector('#prev3');
+const nextButton3 = document.querySelector('#next3');
+const slides3 = document.querySelectorAll('#tab-content3');
+let currentIndex3 = 0;
+nextButton3.addEventListener('click', () => {
+  if (currentIndex3 < slides3.length - 3) { // Show 3 items at a time
+    currentIndex3++;
+    updateCarousel(slides3,carouselInner3,currentIndex1);
+    if(currentIndex3>=slides3.length-3){
+      nextButton3.style.visibility = 'hidden'
+    }
+    prevButton3.style.visibility = 'visible'
+  }
+});
+prevButton3.addEventListener('click', () => {
+  if (currentIndex3 > 0) {
+    currentIndex3--;
+    updateCarousel(slides3,carouselInner3,currentIndex3);
+    if(currentIndex3<=0){
+      prevButton3.style.visibility = 'hidden'
+    }
+    nextButton3.style.visibility = 'visible'
+  }
+});
+
+// Handle window resize
+
