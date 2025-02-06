@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="preload" as="image" 
-  href="./src/assets/webp/hero-image.webp" 
-  imagesizes="100vw">
+  <link rel="preload" as="image" href="./src/assets/webp/hero-image.webp" imagesizes="100vw">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" as="style"
@@ -100,29 +98,29 @@
     <section id="videos">
       <div>
         <div class="animate-on-scroll">
-          <video playsinline autoplay loop muted>
-            <source
-              src="https://dl.dropbox.com/scl/fi/ai62fqeb5vszaz4strqyy/0619-2.mp4?rlkey=8lv3oo1fdc2kqy5zd7yfo39lk&st=33m81x61&dl=0"
-              type="video/mp4" />
+          <video playsinline autoplay loop muted controls="false" preload="none" class="lazy-video"
+            data-src="https://dl.dropbox.com/scl/fi/ai62fqeb5vszaz4strqyy/0619-2.mp4?rlkey=8lv3oo1fdc2kqy5zd7yfo39lk&st=33m81x61&dl=0">
           </video>
           <h4>Lorem, ipsum dolor.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nulla!</p>
         </div>
         <div class="animate-on-scroll">
-          <video playsinline autoplay loop muted>
+          <video playsinline autoplay loop muted controls="false" preload="none" class="lazy-video"
+            data-src="https://dl.dropbox.com/scl/fi/3xlb94b3t6i1nnujymbsq/0619-1.mp4?rlkey=gb6f2gap1rf2cdiq2mm5bnj78&st=4jtm2250&dl=0">
+          </video>
+          <!-- <video playsinline autoplay loop muted>
             <source
               src="https://dl.dropbox.com/scl/fi/3xlb94b3t6i1nnujymbsq/0619-1.mp4?rlkey=gb6f2gap1rf2cdiq2mm5bnj78&st=4jtm2250&dl=0"
               type="video/mp4" />
-          </video>
+          </video> -->
           <h4>Lorem, ipsum dolor.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nulla!</p>
         </div>
         <div class="animate-on-scroll">
-          <video playsinline autoplay loop muted>
-            <source
-              src="https://dl.dropbox.com/scl/fi/3v9aprcu219a245e4e15g/0619.mp4?rlkey=ubjbmj9hj1dbeafuilh2e1o72&st=3yf20tol&dl=0"
-              type="video/mp4" />
+          <video playsinline autoplay loop muted controls="false" preload="none" class="lazy-video"
+            data-src="https://dl.dropbox.com/scl/fi/3v9aprcu219a245e4e15g/0619.mp4?rlkey=ubjbmj9hj1dbeafuilh2e1o72&st=3yf20tol&dl=0">
           </video>
+          
           <h4>Lorem, ipsum dolor.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nulla!</p>
         </div>
@@ -145,7 +143,7 @@
           </div>
           <div class="stages_line"></div>
         </div>
-        <img src="./src/assets/webp/photo.webp" id="stages_img" alt="deco-photo" class="stages_img animate-on-scroll"/>
+        <img src="./src/assets/webp/photo.webp" id="stages_img" alt="deco-photo" class="stages_img animate-on-scroll" />
         <div class="stages_content2 animate-on-scroll">
           <span>02</span>
           <div>
@@ -279,16 +277,7 @@
               <!-- Your existing items -->
               <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
-                  <i class="fa-solid fa-play  play-icon"></i>
-                </div>
-                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
-                <div></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
-              </div>
-              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
-                <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -306,7 +295,7 @@
               </div>
               <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -315,7 +304,16 @@
               </div>
               <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
+                  <i class="fa-solid fa-play  play-icon"></i>
+                </div>
+                <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
+                <div></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magni.</p>
+              </div>
+              <div class="open-modal" id="tab-content2" data-video-id="dQw4w9WgXcQ">
+                <div>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -340,7 +338,7 @@
               <!-- Your existing items -->
               <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -348,7 +346,7 @@
               </div>
               <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -357,7 +355,7 @@
               </div>
               <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -366,7 +364,7 @@
               </div>
               <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
@@ -375,7 +373,7 @@
               </div>
               <div class="open-modal" id="tab-content3" data-video-id="dQw4w9WgXcQ">
                 <div>
-                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy"/>
+                  <img src="./src/assets/webp/hero-image.webp" alt="video-preview" loading="lazy" />
                   <i class="fa-solid fa-play  play-icon"></i>
                 </div>
                 <!-- <i class="fa-solid fa-circle-info info-icon"></i> -->
