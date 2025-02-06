@@ -1001,7 +1001,7 @@
           height: 45px;
 
           &:hover {
-            background-color: var(--purple-75);
+            background-color: transparent;
             color: var(--white-90);
           }
         }
@@ -1023,7 +1023,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--black-80);
+  background-color: var(--black-90);
   height: 60px;
 
   &>div {
