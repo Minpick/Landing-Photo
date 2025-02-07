@@ -202,6 +202,12 @@
   object-fit: cover;
 }
 
+@media(max-width:800px) {
+  .hero-image {
+    height: 70vh;
+  }
+}
+
 #home {
   position: relative;
   height: 100vh;
@@ -228,9 +234,19 @@
 
 @media(max-width:800px) {
   #home {
+    height: 70vh;
 
     &>div {
       width: 80%;
+
+      &>h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      &>p {
+        font-size: 0.7rem;
+      }
     }
   }
 }
@@ -495,8 +511,8 @@
   }
 
   #portfolio {
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 
     &>div {
       height: fit-content;
@@ -552,20 +568,29 @@
 
 @media(max-width:800px) {
   #aboutus {
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 
     &>div {
-      flex-direction: column;
-      gap: 50px;
+      /* flex-direction: column; */
+      gap: 10px;
 
       &>div {
-        gap: 10px;
+        gap: 15px;
         width: 100%;
         max-width: none;
 
+        &>svg {
+          font-size: 1.5rem;
+        }
+
+        &>h3 {
+          font-size: 0.8rem;
+        }
+
         &>p {
           width: 100%;
+          font-size: 0.6rem;
         }
       }
     }
@@ -875,13 +900,39 @@
     padding-bottom: 60px;
     padding-top: 40px;
 
+    .stages_line {
+      display: none;
+    }
+
     &>div {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
+      gap: 5px;
 
       &>div {
         padding-bottom: 40px;
         margin-right: 0;
+        gap: 10px;
+        flex-direction: column;
+
+        &>span {
+          display: flex;
+          font-size: 1rem;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &>div {
+          &>h3 {
+            font-size: 0.8rem;
+          }
+
+          &>p {
+            line-height: 0.8rem;
+            font-size: 0.5rem;
+          }
+        }
       }
 
       &>img {
@@ -954,11 +1005,29 @@
 
 @media(max-width:800px) {
   #videos {
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 
     &>div {
-      flex-direction: column;
+      gap: 10px;
+
+      /* flex-direction: column; */
+      &>div {
+        &>video {
+          width: 120px;
+          height: 250px;
+        }
+
+        &>h4 {
+          font-size: 0.6rem;
+          bottom: 60px;
+          left: 5px;
+        }
+
+        &>p {
+          font-size: 0.5rem;
+        }
+      }
     }
   }
 }
