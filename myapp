@@ -1,0 +1,11 @@
+server {
+  listen 80;
+  server_name 37.202.222.108;  # Replace with your domain/IP
+
+  root /var/www/myapp/dist;     # Path to your dist folder
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}

@@ -908,13 +908,24 @@
       display: flex;
       /* flex-direction: column; */
       gap: 5px;
+      &>.stages_content2 {
+    
+        &>span {
+          color: var(--purple-60);
+        }
 
+        &>div>h3 {
+          color: var(--purple-60);
+        }
+
+
+    }
       &>div {
         padding-bottom: 40px;
         margin-right: 0;
         gap: 10px;
         flex-direction: column;
-
+        
         &>span {
           display: flex;
           font-size: 1rem;
@@ -922,7 +933,7 @@
           align-items: center;
           justify-content: center;
         }
-
+        
         &>div {
           &>h3 {
             font-size: 0.8rem;
