@@ -5,7 +5,7 @@
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const lazyVideos = document.querySelectorAll('.lazy-video');
-  
+
 //   const observer = new IntersectionObserver((entries) => {
 //     entries.forEach(entry => {
 //       if (entry.isIntersecting) {
@@ -65,13 +65,8 @@ function closeModal() {
 openModalButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     // Проверяем ширину экрана
-    const isMobile = window.matchMedia('(max-width: 800px)').matches;
 
     // Для мобильных: проверяем, был ли клик на иконке play
-    if (isMobile) {
-      const playIcon = event.target.closest('.fa-play');
-      if (!playIcon) return; // Если клик не по иконке - выходим
-    }
 
     const videoId = button.getAttribute('data-video-id');
     openModal(videoId);
@@ -159,17 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Находим все контентные блоки и изображения
   const contentBlocks = document.querySelectorAll('[class^="stages_content"]');
   const allImages = document.querySelectorAll('[id^="stages_img"]');
 
   // Для каждого блока добавляем обработчики событий
   contentBlocks.forEach(block => {
-    block.addEventListener('mouseenter', function() {
+    block.addEventListener('mouseenter', function () {
       // Находим следующее изображение после текущего блока
       const img = this.nextElementSibling;
-      
+
       // Проверяем, что это нужное изображение
       if (img && img.matches('img[id^="stages_img"]')) {
         // Удаляем класс у всех изображений
@@ -184,143 +179,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Carousel functionality
-// Функция обновления карусели
-function updateCarousel(slides, carouselInner, currentIndex) {
-  const slideWidth = slides[0].offsetWidth;
-  // Используем переданный элемент carouselInner, а не глобальный carouselInner1
-  const gap = parseInt(window.getComputedStyle(carouselInner).gap) || 20;
-  const translateX = -(currentIndex * (slideWidth + gap));
-  carouselInner.style.transform = `translateX(${translateX}px)`;
-}
-
-// Обработчик изменения размеров окна
-window.addEventListener('resize', () => {
-  // При изменении размеров можно обновлять текущие карусели,
-  // передавая актуальные значения currentIndex для каждой
-  updateCarousel(slides1, carouselInner1, currentIndex1);
-  updateCarousel(slides2, carouselInner2, currentIndex2);
-  updateCarousel(slides3, carouselInner3, currentIndex3);
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+  slidesPerView:3,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
-
-// Первой карусели
-const carouselInner1 = document.querySelector('#carousel1');
-const prevButton1 = document.querySelector('#prev1');
-const nextButton1 = document.querySelector('#next1');
-const slides1 = document.querySelectorAll('#tab-content1');
-let currentIndex1 = 0;
-nextButton1.addEventListener('click', () => {
-  if (currentIndex1 < slides1.length - 3) { // показываем 3 элемента одновременно
-    currentIndex1++;
-    updateCarousel(slides1, carouselInner1, currentIndex1);
-    if (currentIndex1 >= slides1.length - 3) {
-      nextButton1.style.visibility = 'hidden';
-    }
-    prevButton1.style.visibility = 'visible';
-  }
-});
-prevButton1.addEventListener('click', () => {
-  if (currentIndex1 > 0) {
-    currentIndex1--;
-    updateCarousel(slides1, carouselInner1, currentIndex1);
-    if (currentIndex1 <= 0) {
-      prevButton1.style.visibility = 'hidden';
-    }
-    nextButton1.style.visibility = 'visible';
-  }
-});
-
-// Второй карусели
-const carouselInner2 = document.querySelector('#carousel2');
-const prevButton2 = document.querySelector('#prev2');
-const nextButton2 = document.querySelector('#next2');
-const slides2 = document.querySelectorAll('#tab-content2');
-let currentIndex2 = 0;
-nextButton2.addEventListener('click', () => {
-  if (currentIndex2 < slides2.length - 3) {
-    currentIndex2++;
-    updateCarousel(slides2, carouselInner2, currentIndex2);
-    if (currentIndex2 >= slides2.length - 3) {
-      nextButton2.style.visibility = 'hidden';
-    }
-    prevButton2.style.visibility = 'visible';
-  }
-});
-prevButton2.addEventListener('click', () => {
-  if (currentIndex2 > 0) {
-    currentIndex2--;
-    updateCarousel(slides2, carouselInner2, currentIndex2);
-    if (currentIndex2 <= 0) {
-      prevButton2.style.visibility = 'hidden';
-    }
-    nextButton2.style.visibility = 'visible';
-  }
-});
-
-// Третьей карусели
-const carouselInner3 = document.querySelector('#carousel3');
-const prevButton3 = document.querySelector('#prev3');
-const nextButton3 = document.querySelector('#next3');
-const slides3 = document.querySelectorAll('#tab-content3');
-let currentIndex3 = 0;
-nextButton3.addEventListener('click', () => {
-  if (currentIndex3 < slides3.length - 3) {
-    currentIndex3++;
-    updateCarousel(slides3, carouselInner3, currentIndex3);
-    if (currentIndex3 >= slides3.length - 3) {
-      nextButton3.style.visibility = 'hidden';
-    }
-    prevButton3.style.visibility = 'visible';
-  }
-});
-prevButton3.addEventListener('click', () => {
-  if (currentIndex3 > 0) {
-    currentIndex3--;
-    updateCarousel(slides3, carouselInner3, currentIndex3);
-    if (currentIndex3 <= 0) {
-      prevButton3.style.visibility = 'hidden';
-    }
-    nextButton3.style.visibility = 'visible';
-  }
-});
-
-// Функция для добавления свайп-обработчиков на мобильных устройствах
-function addSwipeListeners(carouselInner, nextButton, prevButton) {
-  let startX = 0;
-  let endX = 0;
-  const threshold = 50; // минимальное расстояние для распознавания свайпа (в пикселях)
-
-  carouselInner.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  }, { passive: true });
-
-  carouselInner.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    const diff = startX - endX;
-    if (Math.abs(diff) > threshold) {
-      if (diff > 0) {
-        // свайп влево → следующий слайд
-        if (nextButton && nextButton.style.visibility !== 'hidden') {
-          nextButton.click();
-        }
-      } else {
-        // свайп вправо → предыдущий слайд
-        if (prevButton && prevButton.style.visibility !== 'hidden') {
-          prevButton.click();
-        }
-      }
-    }
-  }
-}
-
-// Применяем функционал свайпа к каждой карусели
-addSwipeListeners(carouselInner1, nextButton1, prevButton1);
-addSwipeListeners(carouselInner2, nextButton2, prevButton2);
-addSwipeListeners(carouselInner3, nextButton3, prevButton3);
-
-// Handle window resize
-
