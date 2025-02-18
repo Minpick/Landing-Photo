@@ -226,10 +226,12 @@
 
     &>div>a>button {
       margin-top: 100px;
-      background-color: rgba(255, 255, 255, 0.801);
-      color: var(--black-90);
+      /* background-color: rgba(255, 255, 255, 0.801); */
+      background-color: var(--purple-40);
+      /* color: var(--black-90); */
       height: 60px;
       width: 200px;
+      box-shadow: 0px 0px 10px var(--purple-40);
     }
 
     &>h1 {
@@ -487,14 +489,14 @@
         gap: 10px;
         padding: 30px;
         border-radius: 15px;
-        background-color: #00000068;
-        border: 1px solid #ffffff1f;
+        background-color: #00000032;
+        /* border: 1px solid #ffffff1f; */
+        box-shadow: 0px 0px 7px #3c00a57a;
         width: 100%;
-        max-width: 80%;
+        max-width: 90%;
         align-items: flex-start;
-        padding-left: 50px;
-        
         padding-left: 70px;
+
         &>svg {
           font-size: 1.5rem;
           position: absolute;
@@ -514,10 +516,10 @@
           font-size: 0.7rem;
         }
 
-        &:nth-child(2) {
-          /* align-self: flex-end; */
-          /* background-color: #4d13b1; */
-        }
+        /* &:nth-child(2) { */
+        /* align-self: flex-end; */
+        /* background-color: #4d13b1; */
+        /* } */
       }
     }
 
@@ -690,12 +692,15 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
+
+
 
         &>div {
           position: absolute;
           bottom: 0;
           gap: 10px;
-          text-shadow: 1px 1px 1px black;
+          z-index: 6;
 
           &>h4 {
             font-size: 0.9rem;
@@ -704,6 +709,19 @@
           &>p {
             font-size: 0.7rem;
           }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-radius: 5px;
+          overflow: hidden;
+          background: linear-gradient( transparent,black);
+          z-index: 5;
         }
       }
     }
@@ -838,7 +856,8 @@
     padding: 0 20px;
     padding-bottom: 60px;
     padding-top: 40px;
-background-color: transparent;
+    background-color: transparent;
+
     .stages_line {
       display: none;
     }
@@ -960,7 +979,7 @@ background-color: transparent;
         left: 10px;
         font-size: 1.4rem;
         font-weight: 700;
-        text-shadow: 0px 1px 1px black;
+        /* text-shadow: 0px 1px 1px black; */
       }
     }
   }
@@ -995,7 +1014,7 @@ background-color: transparent;
           left: 5px;
           max-width: 80%;
           font-size: 0.7rem;
-          text-shadow: 1px 1px 1px black;
+          /* text-shadow: 1px 1px 1px black; */
         }
       }
     }
