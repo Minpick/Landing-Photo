@@ -35,7 +35,8 @@
    --purple-95: #EDE7FE;
    --purple-97: #F4F0FE;
    --br-btns: 10px;
-   --shd-btns: 0px 0px 5px var(--purple-75)
+   --shd-btns: 0px 0px 5px var(--purple-75);
+   --swiper-theme-color: #610ff7;
 }
 
 
@@ -53,10 +54,7 @@ body {
    background-size: cover;
    padding-bottom: 60px;
 }
-.swiper {
-   width: 600px;
-   height: 300px;
- }
+
 button {
    height: 40px;
    background-color: var(--purple-40);

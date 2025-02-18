@@ -3,30 +3,6 @@
 
 //header background change
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const lazyVideos = document.querySelectorAll('.lazy-video');
-
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         const video = entry.target;
-//         const source = document.createElement('source');
-//         source.src = video.dataset.src;
-//         source.type = 'video/mp4';
-//         video.appendChild(source);
-//         video.load();
-//         video.classList.add('loaded');
-//         observer.unobserve(video);
-//       }
-//     });
-//   }, {
-//     rootMargin: '200px 0px',
-//     threshold: 0.1
-//   });
-
-//   lazyVideos.forEach(video => observer.observe(video));
-// });
-
 document.addEventListener('scroll', () => {
   // Получаем текущую прокрутку
   const scrollPosition = window.scrollY;
@@ -176,14 +152,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
+const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  loop: true,
-  slidesPerView:3,
+  loop: false,
+  slidesPerView:isMobile?1:3,
   // Navigation arrows
+  spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
