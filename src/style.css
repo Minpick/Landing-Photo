@@ -226,14 +226,16 @@
     &>div>a>button {
       margin-top: 100px;
       /* background-color: rgba(255, 255, 255, 0.801); */
-      background-color: var(--purple-40);
+      background-color: var(--white-90);
       /* color: var(--black-90); */
       height: 60px;
       width: 200px;
+      color: var(--black-80);
       box-shadow: 0px 0px 10px var(--purple-40);
     }
 
     &>img {
+      margin-right: auto;
       max-height: 100px;
     }
 
@@ -258,6 +260,7 @@
 
       &>img {
         max-height: 30px;
+        margin-right: 0;
       }
 
       &>p {
@@ -795,17 +798,20 @@
       &>div {
         display: flex;
         flex-direction: column;
-        /* gap: 20px; */
+        gap: 20px;
 
         &>h3 {
           transition: color .4s;
           font-size: 1.8rem;
+          font-weight: 400;
         }
 
         &>p {
+          /* padding: 10px 0; */
           line-height: 1.5rem;
           color: var(--black-40);
           font-size: 1.2rem;
+          padding-bottom: 20px;
         }
       }
     }
@@ -969,15 +975,15 @@
         font-size: 1.1rem;
         font-weight: 500;
         text-align: start;
-        padding-left: 10px;
+        padding-left: 25px;
         width: 100%;
         padding-right: 50px;
       }
 
       &>h4 {
         position: absolute;
-        bottom: 90px;
-        left: 20px;
+        bottom: 85px;
+        left: 25px;
         font-size: 1.4rem;
         font-weight: 700;
       }
