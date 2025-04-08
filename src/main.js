@@ -29,7 +29,7 @@ const modalVideo = document.getElementById('modalVideo');
 const openModalButtons = document.querySelectorAll('.open-modal');
 
 function openModal(videoId) {
-  modalVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  modalVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&vq=hd2160`;
   modal.style.display = 'flex';
 }
 
