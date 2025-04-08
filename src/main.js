@@ -158,7 +158,7 @@ const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: false,
-  slidesPerView:isMobile?1:3,
+  slidesPerView: isMobile ? 1 : 3,
   // Navigation arrows
   spaceBetween: 10,
   navigation: {

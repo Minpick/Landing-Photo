@@ -89,6 +89,7 @@ h1 {
    font-size: 3rem;
    position: relative;
    margin-bottom: 60px;
+   font-weight: 400;
 }
 
 @media(max-width:800px){
