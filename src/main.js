@@ -12,10 +12,8 @@ document.addEventListener('scroll', () => {
   if (header) {
     if (scrollPosition > window.innerHeight - 80) {
       header.style.backgroundColor = 'var(--black-transparent)';
-      headerContainer.style.borderBottomColor = 'transparent' // Новый цвет
     } else {
       header.style.backgroundColor = 'transparent'; // Начальный цвет
-      headerContainer.style.borderBottomColor = 'var(--black-70)'; // Начальный цвет
     }
   }
 });

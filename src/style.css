@@ -23,10 +23,16 @@
     margin: 0 auto;
     gap: 20px;
     transition: border-bottom-color 0.7s;
-    border-bottom: 1px solid var(--black-70);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &>img{
+      max-height: 30px;
+      flex: 1 1 0;
+    }
+    &>nav{
+      flex: 1 1 0;
+    }
   }
 
   &>div>div {
@@ -37,16 +43,19 @@
   &>div>nav {
     display: flex;
     gap: 10px;
-
+justify-content: end;
     &>a {
       display: flex;
       align-items: center;
       height: 100%;
-      font-weight: 500;
+      font-weight: 400;
       padding: 10px;
-
+      font-size: 14px;
+      height: 60px;
+      text-transform: uppercase;
+color: white;
       &:hover {
-        color: var(--purple-75);
+        color: var(--black-30);
       }
     }
 
@@ -223,16 +232,7 @@
     gap: 20px;
     justify-content: center;
 
-    &>div>a>button {
-      margin-top: 100px;
-      /* background-color: rgba(255, 255, 255, 0.801); */
-      background-color: var(--white-90);
-      /* color: var(--black-90); */
-      height: 60px;
-      width: 200px;
-      color: var(--black-80);
-      box-shadow: 0px 0px 10px var(--purple-40);
-    }
+
 
     &>img {
       margin-right: auto;
@@ -240,6 +240,7 @@
     }
 
     &>p {
+      color: white;
       font-size: 1.5rem;
     }
 
@@ -468,9 +469,11 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
-      justify-content: space-between;
-      max-width: 250px;
-
+      max-width: 300px;
+      height: 250px;
+&>svg{
+  color: var(--yellow-20);
+}
       &>h3 {
         text-align: center;
         font-size: 1.5rem;

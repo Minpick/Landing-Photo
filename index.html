@@ -7,13 +7,11 @@
   <link rel="preload" as="image" href="./src/assets/webp/hero-image.webp" imagesizes="100vw">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" as="style"
-    onload="this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@100..900&display=swap" rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  </noscript>
   <!-- rel="preload" as="style" -->
   <!-- <link rel="stylesheet" href="/fontawesome/css/brands.min.css" />
   <link rel="stylesheet" href="/fontawesome/css/solid.min.css" />
@@ -28,13 +26,13 @@
 <body>
   <header id="header">
     <div id="header-container">
-      <h4>
-        <img src="src/assets/icons/istOria.svg" style="max-height: 30px;"/>
-      </h4>
-      <nav id="nav-menu">
+      <nav id="nav-menu" style="justify-content: start;">
         <a href="/">Home</a>
         <a href="#aboutus">About us</a>
         <a href="#stages">Stages</a>
+      </nav>
+        <img src="/src/assets/icons/logo.svg"/>
+      <nav id="nav-menu">
         <a href="#portfolio">Portfolio</a>
         <a href="#team">Team</a>
         <a href="#faq">FAQ</a>
@@ -57,12 +55,13 @@
   <main>
     <section id="home">
       <div>
-          <img src="/src/assets/icons/istOria.svg"/>
+          <img src="/src/assets/icons/logo.svg" style="margin-left: -8px;"/>
         <p>
-          full cycle video production in Dubai
+          FULL CYCLE VIDEO PRODUCTION <br/>
+IN DUBAI
         </p>
         <div>
-          <a href="https://wa.me/89372044644" target="_blank"><button>Contact Us
+          <a href="https://wa.me/89372044644" target="_blank"><button>CONTACT US
               <!-- <i class="fa-brands fa-whatsapp fa-lg"
                 style="margin-left: 5px;"></i> -->
             </button></a>
@@ -73,7 +72,8 @@
       <h1>About Us</h1>
       <div>
         <div class="animate-on-scroll">
-          <i class="fa-solid fa-briefcase fa-2xl"></i>
+          <i class="fa-solid fa-images fa-2xl"></i>
+          
           <h3>
             Quality
           </h3>
@@ -91,7 +91,7 @@
           </p>
         </div>
         <div class="animate-on-scroll">
-          <i class="fa-solid fa-images fa-2xl"></i>
+          <i class="fa-solid fa-briefcase fa-2xl"></i>
           <h3>
             Result
           </h3>
