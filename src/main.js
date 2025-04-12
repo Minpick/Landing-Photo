@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
     if (header) {
       if (scrollPosition > window.innerHeight - 80) {
         header.style.backgroundColor = 'white';
-        logo.src = '/src/assets/icons/logoBlack.svg'
+        logo.src = '/logoBlack.svg'
         links.forEach(link => {
           link.style.color = 'black';
         })
@@ -23,7 +23,7 @@ document.addEventListener('scroll', () => {
         // header.style.backgroundColor = 'var(--black-transparent)';
       } else {
         header.style.backgroundColor = 'transparent'; // Начальный цвет
-        logo.src = '/src/assets/icons/logo.svg'
+        logo.src = '/logo.svg'
         links.forEach(link => {
           link.style.color = 'white';
         })
