@@ -7,13 +7,27 @@ document.addEventListener('scroll', () => {
   // Получаем текущую прокрутку
   const scrollPosition = window.scrollY;
   const header = document.getElementById('header')
+  const links = document.querySelectorAll('#navLink')
+  const logo = document.getElementById('logoImg')
   const headerContainer = document.getElementById('header-container')
   // Проверяем, если прокрутка больше 100vh
-  if (header) {
-    if (scrollPosition > window.innerHeight - 80) {
-      header.style.backgroundColor = 'var(--black-transparent)';
-    } else {
-      header.style.backgroundColor = 'transparent'; // Начальный цвет
+  if (window.innerWidth > 800) {
+    if (header) {
+      if (scrollPosition > window.innerHeight - 80) {
+        header.style.backgroundColor = 'white';
+        logo.src = '/src/assets/icons/logoBlack.svg'
+        links.forEach(link => {
+          link.style.color = 'black';
+        })
+
+        // header.style.backgroundColor = 'var(--black-transparent)';
+      } else {
+        header.style.backgroundColor = 'transparent'; // Начальный цвет
+        logo.src = '/src/assets/icons/logo.svg'
+        links.forEach(link => {
+          link.style.color = 'white';
+        })
+      }
     }
   }
 });
@@ -81,17 +95,23 @@ for (i = 0; i < acc.length; i++) {
 
 
 const burger = document.getElementById('burger-menu');
-const navMenu = document.getElementById('nav-menu');
+const navMenu = document.querySelectorAll('#nav-menu');
+const logo = document.getElementById('logoImg');
 const overlay = document.getElementById('overlay');
 const navLinks = document.querySelectorAll('#nav-menu a');
 
 function closeMenu() {
-  navMenu.classList.remove('active');
+  navMenu.forEach(menu => {
+    menu.classList.remove('active');
+  })
   overlay.classList.remove('active');
 }
 
 burger.addEventListener('click', function () {
-  navMenu.classList.toggle('active');
+  navMenu.forEach(menu => {
+    menu.classList.toggle('active');
+  }
+  )
   overlay.classList.toggle('active');
 });
 
@@ -140,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const img = this.nextElementSibling;
 
       // Проверяем, что это нужное изображение
-      if (img && img.matches('img[id^="stages_img"]')) {
+      if (img && (img.matches('img[id^="stages_img"]') || img.matches('video[id^="stages_img"]'))) {
         // Удаляем класс у всех изображений
         allImages.forEach(image => image.classList.remove('stages_img'));
         // Добавляем класс текущему изображению

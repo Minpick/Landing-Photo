@@ -73,11 +73,12 @@ button {
    height: 72px;
    width: 262px;
    background-color: #fff;
-   box-shadow: var(--shd-btns);
+   /* box-shadow: var(--shd-btns); */
    font-size: 24px;
    font-weight: 400;
    cursor: pointer;
    color: black;
+   text-transform: uppercase;
    transition: background-color .4s;
 
    &:hover {
