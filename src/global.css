@@ -1,4 +1,5 @@
 @import url(./reset.css);
+
 @font-face {
    font-family: 'Sinhala MN';
    src: url('./assets/fonts/sinhala-mn.ttf') format('truetype');
@@ -23,9 +24,11 @@
    --black: #000;
    --black-transparent: rgba(0, 0, 0, 0.6);
    --black-95: #141414;
+
    --black-90: #1A1A1A;
    --black-85: #262626;
    --black-80: #333333;
+   --black-75: #212121;
    --black-70: #4D4D4D;
    --black-50: #808080;
    --black-40: #999999;
@@ -44,7 +47,7 @@
    --purple-97: #F4F0FE;
    --yellow-20: #FFB915;
    --br-btns: 10px;
-   --shd-btns: 0px 0px 5px var(--purple-75);
+   --shd-btns: 0px 0px 5px var(--yellow-20);
    --swiper-theme-color: #610ff7;
 }
 
@@ -78,7 +81,7 @@ button {
    transition: background-color .4s;
 
    &:hover {
-      background-color:  var(--black-20);
+      background-color: var(--black-20);
    }
 }
 
